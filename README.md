@@ -12,7 +12,9 @@ Umi-OCR 支持以插件的形式导入OCR引擎等组件，只需将插件文件
 
 ## OCR插件
 
-放置位置：`UmiOCR-data/plugins/ocr`
+将下载的文件解压，放置于：
+
+#### `UmiOCR-data/plugins/ocr`
 
 ---
 
