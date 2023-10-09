@@ -8,9 +8,9 @@ Umi-OCR 支持以插件的形式导入OCR引擎等组件，只需将插件文件
 
 ## 下载
 
-在 Release 中下载插件。
+在 [Releases](https://github.com/hiroi-sora/Umi-OCR_plugins/releases) 中下载插件。
 
-## OCR插件
+## OCR 文字识别 插件
 
 将下载的文件解压，放置于：
 
@@ -22,13 +22,13 @@ Umi-OCR 支持以插件的形式导入OCR引擎等组件，只需将插件文件
 
 > 性能和准确率优秀的开源离线OCR组件。支持mkldnn数学库加速，能充分榨干CPU的潜力。适合高配置电脑使用。
 
-| 源仓库     | [PaddleOCR-json](https://github.com/hiroi-sora/PaddleOCR-json)              |
-| ---------- | --------------------------------------------------------------------------- |
-| 下载       | [Releases](https://github.com/hiroi-sora/Umi-OCR_plugins/releases)          |
-| 离线       | √                                                                           |
-| 平台兼容   | win10以上，64位                                                             |
-| 硬件兼容   | CPU，须带AVX指令集（不支持凌动Atom，安腾Itanium，赛扬Celeron，奔腾Pentium） |
-| 附带语言库 | `简, 繁, 英, 日, 韩, 俄`                                                    |
+| 源仓库     | [PaddleOCR-json](https://github.com/hiroi-sora/PaddleOCR-json)            |
+| ---------- | ------------------------------------------------------------------------- |
+| 下载       | [Releases](https://github.com/hiroi-sora/Umi-OCR_plugins/releases)        |
+| 计算方式   | 本地，CPU                                                                 |
+| 平台兼容   | win10以上，64位                                                           |
+| 硬件兼容   | CPU须带AVX指令集（不支持凌动Atom，安腾Itanium，赛扬Celeron，奔腾Pentium） |
+| 附带语言库 | `简, 繁, 英, 日, 韩, 俄`                                                  |
 
 ---
 
@@ -39,7 +39,7 @@ Umi-OCR 支持以插件的形式导入OCR引擎等组件，只需将插件文件
 | 源仓库     | [RapidOCR-json](https://github.com/hiroi-sora/RapidOCR-json)       |
 | ---------- | ------------------------------------------------------------------ |
 | 下载       | [Releases](https://github.com/hiroi-sora/Umi-OCR_plugins/releases) |
-| 离线       | √                                                                  |
+| 计算方式   | 本地，CPU                                                          |
 | 平台兼容   | win7以上，64位                                                     |
 | 硬件兼容   | 无特殊要求                                                         |
 | 附带语言库 | `简, 繁, 英, 日, 韩, 俄`                                           |
