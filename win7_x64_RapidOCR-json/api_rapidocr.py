@@ -27,6 +27,7 @@ class Api:  # 公开接口
             "doAngle": 0,
             "mostAngle": 0,
             "maxSideLen": None,
+            "numThread": globalArgd["numThread"],
         }
 
     def start(self, argd):  # 启动引擎。返回： "" 成功，"[Error] xxx" 失败

@@ -1,4 +1,5 @@
 import os
+import psutil
 from i18n import trLoad, tr
 
 trLoad("")
@@ -32,6 +33,31 @@ def _getlanguageList():
 
 _LanguageList = _getlanguageList()
 
+
+# 获取最佳线程数
+def _getThreads():
+    try:
+        phyCore = psutil.cpu_count(logical=False)  # 物理核心数
+        lgiCore = psutil.cpu_count(logical=True)  # 逻辑核心数
+        if (
+            not isinstance(phyCore, int)
+            or not isinstance(lgiCore, int)
+            or lgiCore < phyCore
+        ):
+            raise ValueError("核心数计算异常")
+        # 物理核数=逻辑核数，返回逻辑核数
+        if phyCore * 2 == lgiCore or phyCore == lgiCore:
+            return lgiCore
+        # 大小核处理器，返回大核线程数
+        big = lgiCore - phyCore
+        return big * 2
+    except Exception as e:
+        print("[Warning] 无法获取CPU核心数！", e)
+        return 4
+
+
+_threads = _getThreads()
+
 globalOptions = {
     "title": tr("PaddleOCR（本地）"),
     "type": "group",
@@ -39,6 +65,12 @@ globalOptions = {
         "title": tr("启用MKL-DNN加速"),
         "default": True,
         "toolTip": tr("使用MKL-DNN数学库提高神经网络的计算速度。能大幅加快OCR识别速度，但也会增加内存占用。"),
+    },
+    "cpu_threads": {
+        "title": tr("线程数"),
+        "default": _threads,
+        "min": 1,
+        "isInt": True,
     },
     "ram_max": {
         "title": tr("内存占用限制"),

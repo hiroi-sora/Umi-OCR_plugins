@@ -18,6 +18,7 @@ ExeConfigs = [
     ("cls", "cls"),  # 方向分类
     ("use_angle_cls", "cls"),  # 方向分类
     ("limit_side_len", "limit_side_len"),  # 长边压缩
+    ("cpu_threads", "cpu_threads"),  # 线程数
 ]
 
 

@@ -1,4 +1,5 @@
 import os
+import psutil
 from i18n import trLoad, tr
 
 trLoad("")
@@ -47,9 +48,40 @@ def _getlanguageList():
 
 _LanguageList = _getlanguageList()
 
+
+# 获取最佳线程数
+def _getThreads():
+    try:
+        phyCore = psutil.cpu_count(logical=False)  # 物理核心数
+        lgiCore = psutil.cpu_count(logical=True)  # 逻辑核心数
+        if (
+            not isinstance(phyCore, int)
+            or not isinstance(lgiCore, int)
+            or lgiCore < phyCore
+        ):
+            raise ValueError("核心数计算异常")
+        # 物理核数=逻辑核数，返回逻辑核数
+        if phyCore * 2 == lgiCore or phyCore == lgiCore:
+            return lgiCore
+        # 大小核处理器，返回大核线程数
+        big = lgiCore - phyCore
+        return big * 2
+    except Exception as e:
+        print("[Warning] 无法获取CPU核心数！", e)
+        return 4
+
+
+_threads = _getThreads()
+
 globalOptions = {
     "title": tr("RapidOCR（本地）"),
     "type": "group",
+    "numThread": {
+        "title": tr("线程数"),
+        "default": _threads,
+        "min": 1,
+        "isInt": True,
+    },
 }
 
 localOptions = {
