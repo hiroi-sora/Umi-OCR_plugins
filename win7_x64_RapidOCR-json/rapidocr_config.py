@@ -1,5 +1,5 @@
 import os
-from translate import trLoad, tr
+from i18n import trLoad, tr
 
 trLoad("")
 

@@ -3,6 +3,8 @@ from . import rapidocr_config
 
 # 插件信息
 PluginInfo = {
+    # 插件组别
+    "group": "ocr",
     # 全局配置
     "global_options": rapidocr_config.globalOptions,
     # 局部配置
