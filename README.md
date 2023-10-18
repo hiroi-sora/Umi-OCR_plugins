@@ -6,15 +6,13 @@ Umi-OCR 支持以插件的形式导入OCR引擎等组件，只需将插件文件
 
 注意，插件可能会限制平台（win7、win10……），下载插件前请检查是否与你的平台是否相符。
 
-## 下载
+## 如何安装插件
 
-在 [Releases](https://github.com/hiroi-sora/Umi-OCR_plugins/releases) 中下载插件。
+1. 在 [Releases](https://github.com/hiroi-sora/Umi-OCR_plugins/releases) 中下载插件。
+
+2. 将下载的文件解压，放置于：`UmiOCR-data/plugins`
 
 ## OCR 文字识别 插件
-
-将下载的文件解压，放置于：
-
-#### `UmiOCR-data/plugins/ocr`
 
 ---
 
