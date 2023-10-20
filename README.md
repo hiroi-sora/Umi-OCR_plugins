@@ -47,3 +47,35 @@ Umi-OCR 支持以插件的形式导入OCR引擎等组件，只需将插件文件
 ## 插件开发
 
 文档待补充……
+
+# Umi-OCR 项目结构
+
+### 各仓库：
+
+- [主仓库](https://github.com/hiroi-sora/Umi-OCR_v2)
+- [插件库](https://github.com/hiroi-sora/Umi-OCR_plugins) 👈
+- [Win 运行库](https://github.com/hiroi-sora/Umi-OCR_runtime_windows)
+
+### 工程结构：
+
+`**` 后缀表示本仓库(`插件库`)包含的内容。
+
+```
+Umi-OCR
+├─ Umi-OCR.exe
+└─ UmiOCR-data
+   ├─ main.py
+   ├─ version.py
+   ├─ site-packages
+   │  └─ python包
+   ├─ runtime
+   │  └─ python解释器
+   ├─ qt_res
+   │  └─ 项目qt资源，包括图标和qml源码
+   ├─ py_src
+   │  └─ 项目python源码
+   ├─ plugins **
+   │  └─ 插件
+   └─ i18n
+      └─ 翻译文件
+```
