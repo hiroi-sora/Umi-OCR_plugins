@@ -73,3 +73,7 @@ class Api:  # 公开接口
     def runBytes(self, imageBytes):  # 字节流
         res = self.api.runBytes(imageBytes)
         return res
+
+    def runBase64(self, imageBase64):  # base64字符串
+        res = self.api.runBase64(imageBase64)
+        return res

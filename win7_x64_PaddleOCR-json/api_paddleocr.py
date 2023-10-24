@@ -86,6 +86,12 @@ class Api:  # 公开接口
         self.__ramClear()
         return res
 
+    def runBase64(self, imageBase64):  # base64字符串
+        self.__runBefore()
+        res = self.api.runBase64(imageBase64)
+        self.__ramClear()
+        return res
+
     def __runBefore(self):
         CallFunc.delayStop(self.ramInfo["timerID"])  # 停止ram清理计时器
 
