@@ -1,0 +1,18 @@
+key,en_US,zh_TW,ja_JP
+PaddleOCR（本地）,PaddleOCR (Local),PaddleOCR（本地）,PaddleOCR（ローカル）
+启用MKL-DNN加速,Enable MKL-DNN acceleration,啟用MKL-DNN加速,MKL-DNN加速を有効にする
+使用MKL-DNN数学库提高神经网络的计算速度。能大幅加快OCR识别速度，但也会增加内存占用。,"Use the MKL-DNN mathematical library to improve the computation speed of the neural network. This can significantly accelerate OCR recognition speed, but it will also increase memory usage.",使用MKL-DNN數學庫提高神經網路的計算速度。 能大幅加快OCR識別速度，但也會新增記憶體佔用。,MKL?DNN数学ライブラリを用いてニューラルネットワークの計算速度を向上させた。OCRの認識速度を大幅に速めることができますが、メモリの使用量も増加します。
+线程数,Number of threads,線程數,スレッド数
+内存占用限制,Memory usage limit,記憶體佔用限制,メモリ使用量の制限
+值>0时启用。引擎内存占用超过该值时，执行内存清理。,"Enable when the value is greater than 0. When the memory usage of the engine exceeds this value, memory cleanup will be performed.",值>0時啟用。 引擎記憶體佔用超過該值時，執行記憶體清理。,値>0の場合に有効になります。エンジンメモリがこの値を超えて占有されている場合は、メモリクリーンアップを実行します。
+内存闲时清理,Memory cleanup during idle time,記憶體閑時清理,メモリアイドル時のクリーンアップ
+秒,seconds,秒,秒
+值>0时启用。引擎空闲时间超过该值时，执行内存清理。,"Enable when the value is greater than 0. When the idle time of the engine exceeds this value, memory cleanup will be performed.",值>0時啟用。 引擎空閒時間超過該值時，執行記憶體清理。,値>0の場合に有効になります。エンジンアイドル時間がこの値を超えると、メモリクリーンアップが実行されます。
+文字识别（PaddleOCR）,Text recognition (PaddleOCR),文字識別（PaddleOCR）,文字認識（PaddleOCR）
+语言/模型库,Language/Model library,語言/模型庫,言語/モデルライブラリ
+纠正文本方向,Text direction correction,糾正文字方向,テキスト方向の修正
+启用方向分类，识别倾斜或倒置的文本。可能降低识别速度。,Enable direction classification to recognize slanted or inverted text. This may reduce recognition speed.,啟用方向分類，識別傾斜或倒置的文字。 可能降低識別速度。,方向分類を有効にして、傾斜または反転したテキストを識別します。認識速度が低下する可能性があります。
+限制图像边长,Limit image edge length,限制影像邊長,画像の辺の長さを制限する
+（默认）,(Default),（默認）,(デフォルト)
+无限制,Unlimited,無限制,制限なし
+将边长大于该值的图片进行压缩，可以提高识别速度。可能降低识别精度。,Compress images with edge length greater than this value to improve recognition speed. This may reduce recognition accuracy.,將邊長大於該值的圖片進行壓縮，可以提高識別速度。 可能降低識別精度。,辺の長さがこの値より大きい画像を圧縮することで、認識速度を高めることができます。認識精度が低下する可能性があります。

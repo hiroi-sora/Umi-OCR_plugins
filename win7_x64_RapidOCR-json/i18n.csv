@@ -1,0 +1,11 @@
+key,en_US,zh_TW,ja_JP
+RapidOCR（本地）,RapidOCR (local),RapidOCR（本地）,RapidOCR（ローカル）
+线程数,Number of threads,線程數,スレッド数
+文字识别（RapidOCR）,Text Recognition (RapidOCR),文字識別（RapidOCR）,文字認識（RapidOCR）
+语言/模型库,Language/Model Library,語言/模型庫,言語/モデルライブラリ
+纠正文本方向,Correct Text Direction,糾正文字方向,テキスト方向の修正
+启用方向分类，识别倾斜或倒置的文本。可能降低识别速度。,Enable directional classification to recognize tilted or inverted text. May reduce recognition speed.,啟用方向分類，識別傾斜或倒置的文字。 可能降低識別速度。,方向分類を有効にして、傾斜または反転したテキストを識別します。認識速度が低下する可能性があります。
+限制图像边长,Limit image edge length,限制影像邊長,画像の辺の長さを制限する
+（默认）,(Default),（默認）,(デフォルト)
+无限制,Unlimited,無限制,制限なし
+将边长大于该值的图片进行压缩，可以提高识别速度。可能降低识别精度。,Compressing images with side lengths greater than this value can improve recognition speed. May reduce recognition accuracy.,將邊長大於該值的圖片進行壓縮，可以提高識別速度。 可能降低識別精度。,辺の長さがこの値より大きい画像を圧縮することで、認識速度を高めることができます。認識精度が低下する可能性があります。

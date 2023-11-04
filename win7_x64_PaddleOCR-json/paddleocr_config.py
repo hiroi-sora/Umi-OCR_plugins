@@ -1,8 +1,8 @@
 import os
 import psutil
-from i18n import trLoad, tr
+from plugin_i18n import trLoad, tr
 
-trLoad("")
+trLoad(__file__, "i18n.csv")
 
 # 模块配置路径
 MODELS_CONFIGS = "/models/configs.txt"
