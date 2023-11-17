@@ -1,8 +1,8 @@
 import os
 import psutil
-from plugin_i18n import trLoad, tr
+from plugin_i18n import Translator
 
-trLoad(__file__, "i18n.csv")
+tr = Translator(__file__, "i18n.csv")
 
 # 模块配置路径
 MODELS_CONFIGS = "/models/configs.txt"
@@ -105,6 +105,5 @@ localOptions = {
             [999999, tr("无限制")],
         ],
         "toolTip": tr("将边长大于该值的图片进行压缩，可以提高识别速度。可能降低识别精度。"),
-        "advanced": True,  # 高级选项
     },
 }
