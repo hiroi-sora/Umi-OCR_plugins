@@ -1,10 +1,14 @@
-# Umi-OCR 插件库
+<p align="center">
+  <a href="https://github.com/hiroi-sora/Umi-OCR">
+    <img width="200" height="128" src="https://tupian.li/images/2022/10/27/icon---256.png" alt="Umi-OCR">
+  </a>
+</p>
 
-这里是存放 [Umi-OCR](https://github.com/hiroi-sora/Umi-OCR) 的插件的仓库。
+<h1 align="center">Umi-OCR 插件库</h1>
+
+这里是存放开源软件 [Umi-OCR](https://github.com/hiroi-sora/Umi-OCR) 的插件的仓库。
 
 Umi-OCR (v2以上) 支持以插件的形式导入OCR引擎等组件，只需将插件文件放置于软件指定目录即可。
-
-注意，插件可能会限制平台（win7、win10……），下载插件前请检查是否与你的平台是否相符。
 
 - [如何开发插件？](#插件开发)
 
