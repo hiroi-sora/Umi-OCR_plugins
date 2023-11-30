@@ -2,4 +2,7 @@
 **/*.exe
 **/models
 **/__pycache__
+**/site-packages
+**/models
+*.7z
 temp
