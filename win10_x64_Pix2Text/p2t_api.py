@@ -138,9 +138,10 @@ class Api:  # 接口
             return ""
         except Exception as e:
             self.p2t = None
+            err = str(e)
             if "DLL load failed while importing onnxruntime_pybind11_state" in str(e):
-                e += "\n请下载 Please download VC++2022 :\nhttps://aka.ms/vs/17/release/vc_redist.x64.exe"
-            return f"[Error] {e}"
+                err += "\n请下载 Please download VC++2022 :\nhttps://aka.ms/vs/17/release/vc_redist.x64.exe"
+            return f"[Error] {err}"
 
     def stop(self):
         self.p2t = None
