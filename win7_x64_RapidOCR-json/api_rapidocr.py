@@ -43,7 +43,7 @@ class Api:  # 公开接口
             tempConfigs["maxSideLen"] = argd["maxSideLen"]
         except Exception as e:
             self.api = None
-            return f"[Error] OCR start fail, Argd: {argd} / {e}"
+            return f"[Error] OCR start fail. Argd: {argd}\n{e}"
 
         # 若引擎已启动，且局部参数与传入参数一致，则无需重启
         if not self.api == None:
@@ -57,7 +57,7 @@ class Api:  # 公开接口
             self.api = Rapid_pipe(ExePath, tempConfigs)
         except Exception as e:
             self.api = None
-            return f"[Error] OCR init fail. Argd: {tempConfigs}"
+            return f"[Error] OCR init fail. Argd: {tempConfigs}\n{e}"
         return ""
 
     def stop(self):  # 停止引擎

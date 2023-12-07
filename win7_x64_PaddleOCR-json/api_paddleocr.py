@@ -65,7 +65,7 @@ class Api:  # 公开接口
             self.api = PPOCR_pipe(ExePath, tempConfigs)
         except Exception as e:
             self.api = None
-            return f"[Error] OCR init fail. Argd: {tempConfigs}"
+            return f"[Error] OCR init fail. Argd: {tempConfigs}\n{e}"
         return ""
 
     def stop(self):  # 停止引擎
