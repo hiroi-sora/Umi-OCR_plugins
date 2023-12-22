@@ -31,7 +31,7 @@
 | api_key  | 字符串 | 全局 |
 | language | 枚举   | 局部 |
 
-那么，创建一个 `aba_ocr_config.py` ，如下：
+那么，创建一个 [aba_ocr_config.py](aba_ocr_config.py) ：
 
 ```python
 from plugin_i18n import Translator
@@ -226,7 +226,7 @@ OCR结果的格式：
 
 #### 阿巴的接口：
 
-创建一个 `aba_ocr.py` ，如下：
+创建一个 [aba_ocr.py](aba_ocr.py) ：
 
 ```python
 class Api:  # 接口
@@ -292,7 +292,7 @@ class Api:  # 接口
 
 文件夹名称唯一标识一个插件。文件夹名须为Ascii字符，且 **不能和python中已有的任何模块重名** 。
 
-文件夹中必须有一个 `__init__.py` 。Umi会读取并载入`__init__.py`，以实现动态导入插件。
+文件夹中必须有一个 [`__init__.py`](__init__.py) 。Umi会读取并载入`__init__.py`，以实现动态导入插件。
 
 `__init__.py` 中必须定义一个字典 `PluginInfo` ，如下：
 ```python
@@ -308,12 +308,10 @@ PluginInfo = {
 
 阿巴OCR插件文件夹为 `demo_AbaOCR` ，包含文件有：
 
-```
-__init__.py
-aba_ocr.py
-aba_ocr_config.py
-i18n.csv
-```
+[`__init__.py`](__init__.py)
+[aba_ocr.py](aba_ocr.py)
+[aba_ocr_config.py](aba_ocr_config.py)
+[i18n.csv](i18n.csv)
 
 `__init__.py` 的内容为：
 
