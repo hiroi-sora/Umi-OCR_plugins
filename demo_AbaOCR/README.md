@@ -308,12 +308,12 @@ PluginInfo = {
 
 阿巴OCR插件文件夹为 `demo_AbaOCR` ，包含文件有：
 
-[`__init__.py`](__init__.py)
-[aba_ocr.py](aba_ocr.py)
-[aba_ocr_config.py](aba_ocr_config.py)
-[i18n.csv](i18n.csv)
+[`__init__.py`](__init__.py)  
+[`aba_ocr.py`](aba_ocr.py)  
+[`aba_ocr_config.py`](aba_ocr_config.py)  
+[`i18n.csv`](i18n.csv)  
 
-`__init__.py` 的内容为：
+其中 `__init__.py` 的内容为：
 
 ```python
 from . import aba_ocr
