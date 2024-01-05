@@ -1,3 +1,6 @@
 [submodule "chineseocr_umi_plugin"]
 	path = chineseocr_umi_plugin
 	url = git@github.com:qwedc001/chineseocr_umi_plugin.git
+[submodule "tesseractOCR_umi_plugin"]
+	path = tesseractOCR_umi_plugin
+	url = git@github.com:qwedc001/tesseractOCR_umi_plugin.git
