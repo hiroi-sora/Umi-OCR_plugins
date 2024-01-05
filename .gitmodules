@@ -1,0 +1,3 @@
+[submodule "chineseocr_umi_plugin"]
+	path = chineseocr_umi_plugin
+	url = git@github.com:qwedc001/chineseocr_umi_plugin.git
