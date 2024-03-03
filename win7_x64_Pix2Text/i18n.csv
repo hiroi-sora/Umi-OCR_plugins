@@ -1,4 +1,10 @@
 key,en_US
-支持中文/英文/数学公式混排,Chinese + English + Formulas
+支持中文/英文/数学公式/混排,Chinese + English + Formulas
 （本地）,(local)
 文字识别,Text Recognition
+启用文字识别,Enable Text
+支持简体中文+英文,Support Chinese + English
+启用数学公式,Enable Math Formula
+限制图像边长,Limit image edge length
+（默认）,(Default)
+将边长大于该值的图片进行压缩，可以提高识别速度。可能降低识别精度。,Compressing images with side lengths greater than this value can improve recognition speed. May reduce recognition accuracy.
