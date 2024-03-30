@@ -26,6 +26,8 @@ Umi-OCR (v2 以上) 支持以插件的形式导入 OCR 引擎等组件，只需�
 
 ### win7_x64_PaddleOCR-json
 
+（ Umi-OCR_Paddle 版自带此插件）
+
 > 性能和准确率优秀的开源离线 OCR 组件。支持 mkldnn 数学库加速，能充分榨干 CPU 的潜力。适合高配置电脑使用。
 
 | 源仓库     | [PaddleOCR-json](https://github.com/hiroi-sora/PaddleOCR-json)                   |
@@ -39,6 +41,8 @@ Umi-OCR (v2 以上) 支持以插件的形式导入 OCR 引擎等组件，只需�
 ---
 
 ### win7_x64_RapidOCR-json
+
+（ Umi-OCR_Rapid 版自带此插件）
 
 > 轻量、高兼容性的开源离线 OCR 组件。内存与 CPU 占用低。速度相对慢一点。适合低配置老电脑使用。
 
@@ -66,6 +70,21 @@ Umi-OCR (v2 以上) 支持以插件的形式导入 OCR 引擎等组件，只需�
 
 ---
 
+TesseractOCR_umi_plugin
+
+> 老牌开源模型，支持多国语言。速度较快，英文准确率优秀，中文准确率稍差。支持导入多个小语种识别库。  
+> 带有额外的排版识别库，能识别复杂的文档排版，比Umi自带的排版解析工具准确率更好。如果使用此插件，请在Umi的标签页设置中将“排版解析方案”设为“不做处理”。  
+
+| 源仓库     | [TesseractOCR](https://github.com/tesseract-ocr/tesseract)               |
+| ---------- | ------------------------------------------------------------------------ |
+| 下载       | [Releases](https://github.com/qwedc001/tesseractOCR_umi_plugin/releases) |
+| 计算方式   | 本地，CPU                                                                |
+| 平台兼容   | win7 以上，64 位                                                         |
+| 硬件兼容   | 无特殊要求                                                               |
+| 附带语言库 | `简, 繁, 英, 日，数学公式` （另支持自行下载其他语言模型                  |
+
+---
+
 ### chineseocr_umi_plugin
 
 > 支持中英文识别，ChineseOCR 的轻量级模型，仍在接入适配中。
@@ -77,21 +96,6 @@ Umi-OCR (v2 以上) 支持以插件的形式导入 OCR 引擎等组件，只需�
 | 平台兼容   | win7 以上，64 位                                                       |
 | 硬件兼容   | 无特殊要求                                                             |
 | 附带语言库 | 中英文                                                                 |
-
----
-
-### tesseractOCR_umi_plugin
-
-> 老牌开源模型，支持多国语言。速度较快，英文准确率优秀，中文准确率稍差。  
-> 带有额外的排版识别库，能识别复杂的文档排版，比Umi自带的排版解析工具准确率更好。如果使用此插件，请在Umi的标签页设置中将“排版解析方案”设为“不做处理”。  
-
-| 源仓库     | [TesseractOCR](https://github.com/tesseract-ocr/tesseract)               |
-| ---------- | ------------------------------------------------------------------------ |
-| 下载       | [Releases](https://github.com/qwedc001/tesseractOCR_umi_plugin/releases) |
-| 计算方式   | 本地，CPU                                                                |
-| 平台兼容   | win7 以上，64 位                                                         |
-| 硬件兼容   | 无特殊要求                                                               |
-| 附带语言库 | `简, 繁, 英, 日，数学公式` （另支持自行下载其他语言模型                  |
 
 ---
 
