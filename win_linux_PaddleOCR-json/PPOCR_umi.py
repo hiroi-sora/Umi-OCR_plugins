@@ -1,17 +1,28 @@
-# 调用 PaddleOCR-json.exe 的 Python Api
+# Umi-OCR 插件接口： PaddleOCR-json
 # 项目主页：
 # https://github.com/hiroi-sora/PaddleOCR-json
 
-from call_func import CallFunc
-
-from .paddleocr import PPOCR_pipe
-
 import os
 import psutil  # 进程检查
+from platform import system  # 平台检查
 
-# exe路径
-ExePath = os.path.dirname(os.path.abspath(__file__)) + "/PaddleOCR-json.exe"
-# exe启动参数映射表。将配置项映射到启动参数
+from call_func import CallFunc
+from .PPOCR_api import PPOCR_pipe
+
+# 引擎可执行文件（入口）名称
+# # TODO ：改为 Umi 内部的平台标志，无需自己获取标志
+system_type = system()
+ExeFile = ""
+if system_type == "Windows":
+    ExeFile = "PaddleOCR-json.exe"
+elif system_type == "Linux":
+    ExeFile = "run.sh"
+else:
+    raise NotImplementedError(f"[Error] PaddleOCR: Unsupported system: {system_type}")
+
+# 引擎可执行文件路径
+ExePath = os.path.join(os.path.dirname(os.path.abspath(__file__)), ExeFile)
+# 引擎可执行文件启动参数映射表。将配置项映射到启动参数
 ExeConfigs = [
     ("enable_mkldnn", "enable_mkldnn"),  # mkl加速
     ("config_path", "language"),  # 配置文件路径
@@ -62,7 +73,7 @@ class Api:  # 公开接口
         self.exeConfigs = tempConfigs
         # 启动引擎
         try:
-            self.api = PPOCR_pipe(ExePath, tempConfigs)
+            self.api = PPOCR_pipe(ExePath, argument=tempConfigs)
         except Exception as e:
             self.api = None
             return f"[Error] OCR init fail. Argd: {tempConfigs}\n{e}"
@@ -99,7 +110,7 @@ class Api:  # 公开接口
         self.stop()
         # 启动引擎
         try:
-            self.api = PPOCR_pipe(ExePath, self.exeConfigs)
+            self.api = PPOCR_pipe(ExePath, argument=self.exeConfigs)
             print("重启引擎")
         except Exception as e:
             self.api = None
