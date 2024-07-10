@@ -81,8 +81,8 @@ def _getRamMax():
     # 内存下限200MB，上限8G
     if ramMax < 200:
         ramMax = 200
-    elif ramMax > 8129:
-        ramMax = 8129
+    elif ramMax > 8192:
+        ramMax = 8192
     return ramMax
 
 
