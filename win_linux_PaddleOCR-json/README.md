@@ -2,16 +2,20 @@
 
 兼容 `Windows 7 x64`、`Linux x64` 。
 
-- [Windows 简易部署](#Windows%20简易部署步骤)
-- [Windows 源码部署](#Windows%20源码部署步骤)
-- [Linux 简易部署](#Linux%20简易部署步骤)
-- [Linux 源码部署](#Linux%20源码部署步骤)
+- [Windows 简易部署](#win-1)
+- [Windows 源码部署](#win-2)
+- [Linux 简易部署](#linux-1)
+- [Linux 源码部署](#linux-2)
+
+<a id="win-1"></a>
 
 ## Windows 简易部署步骤
 
 - 按照 [Umi-OCR Linux 运行环境](https://github.com/hiroi-sora/Umi-OCR_runtime_linux) 的说明，配置 Umi-OCR 本体。
 - 访问 [Umi-OCR_plugins 发布页](https://github.com/hiroi-sora/Umi-OCR_plugins/releases) ，下载最新的 Windows 发行包 `win7_x64_PaddleOCR-json_**.7z` ，解压。
 - 解压得到的文件夹，丢到 Umi-OCR 的插件目录 `UmiOCR-data/plugins` 。
+
+<a id="win-2"></a>
 
 ## Windows 源码部署步骤
 
@@ -50,6 +54,7 @@ git clone https://github.com/hiroi-sora/Umi-OCR_plugins.git
 
 在全局设置→拉到最底下，可以看到 PaddleOCR-json 插件相关的性能设置。
 
+<a id="linux-1"></a>
 
 ## Linux 简易部署步骤
 
@@ -68,6 +73,8 @@ wget https://github.com/hiroi-sora/Umi-OCR_plugins/releases/download/2.1.3_dev/l
 tar -v -xf linux_x64_PaddleOCR-json_v140_beta.tar.xz
 # 完成，打开 Umi-OCR 软件，进行测试吧
 ```
+
+<a id="linux-2"></a>
 
 ## Linux 源码部署步骤
 
