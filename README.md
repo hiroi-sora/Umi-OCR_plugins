@@ -24,9 +24,10 @@ Umi-OCR (v2 以上) 支持以插件的形式导入 OCR 引擎等组件，只需�
 
 ## OCR 文字识别 插件
 
-### win7_x64_PaddleOCR-json
+### win7_x64_PaddleOCR-json / linux_x64_PaddleOCR-json
 
-（ Umi-OCR_Paddle 版自带此插件）
+- Umi-OCR_Paddle 版自带此插件
+- 目前唯一支持 Windows、Linux 双平台的插件
 
 > 性能和准确率优秀的开源离线 OCR 组件。支持 mkldnn 数学库加速，能充分榨干 CPU 的潜力。适合高配置电脑使用。
 
@@ -34,7 +35,7 @@ Umi-OCR (v2 以上) 支持以插件的形式导入 OCR 引擎等组件，只需�
 | ---------- | -------------------------------------------------------------------------------- |
 | 下载       | [Releases](https://github.com/hiroi-sora/Umi-OCR_plugins/releases)               |
 | 计算方式   | 本地，CPU                                                                        |
-| 平台兼容   | win7 以上，64 位                                                                 |
+| 平台兼容   | Windows 7 x64 / Linux x64                                                        |
 | 硬件兼容   | CPU 须带 AVX 指令集（不支持凌动 Atom，安腾 Itanium，赛扬 Celeron，奔腾 Pentium） |
 | 附带语言库 | `简, 繁, 英, 日, 韩, 俄`                                                         |
 
@@ -42,7 +43,7 @@ Umi-OCR (v2 以上) 支持以插件的形式导入 OCR 引擎等组件，只需�
 
 ### win7_x64_RapidOCR-json
 
-（ Umi-OCR_Rapid 版自带此插件）
+- Umi-OCR_Rapid 版自带此插件
 
 > 相当于PaddleOCR的“轻量版”。CPU兼容性好、内存占用低。速度相对慢一点。适合低配置老电脑使用。
 
@@ -66,7 +67,7 @@ Umi-OCR (v2 以上) 支持以插件的形式导入 OCR 引擎等组件，只需�
 | 计算方式   | 本地，CPU                                                          |
 | 平台兼容   | win7 以上，64 位                                                   |
 | 硬件兼容   | 无特殊要求                                                         |
-| 附带语言库 | `中文/英文/数学公式`                                                |
+| 附带语言库 | `中文/英文/数学公式`                                               |
 
 ---
 
@@ -110,6 +111,7 @@ Umi-OCR (v2 以上) 支持以插件的形式导入 OCR 引擎等组件，只需�
 - [主仓库](https://github.com/hiroi-sora/Umi-OCR)
 - [插件库](https://github.com/hiroi-sora/Umi-OCR_plugins) 👈
 - [Win 运行库](https://github.com/hiroi-sora/Umi-OCR_runtime_windows)
+- [Linux 运行库](https://github.com/hiroi-sora/Umi-OCR_runtime_linux)
 
 ### 工程结构：
 
@@ -117,14 +119,9 @@ Umi-OCR (v2 以上) 支持以插件的形式导入 OCR 引擎等组件，只需�
 
 ```
 Umi-OCR
-├─ Umi-OCR.exe
 └─ UmiOCR-data
    ├─ main.py
    ├─ version.py
-   ├─ site-packages
-   │  └─ python包
-   ├─ runtime
-   │  └─ python解释器
    ├─ qt_res
    │  └─ 项目qt资源，包括图标和qml源码
    ├─ py_src
