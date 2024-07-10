@@ -67,6 +67,8 @@ git clone https://github.com/hiroi-sora/Umi-OCR_plugins.git
 ```
 # 去到插件目录
 cd UmiOCR-data/plugins
+# 如果没有则创建
+# mkdir UmiOCR-data/plugins
 # 下载
 wget https://github.com/hiroi-sora/Umi-OCR_plugins/releases/download/2.1.3_dev/linux_x64_PaddleOCR-json_v140_beta.tar.xz
 # 解压
