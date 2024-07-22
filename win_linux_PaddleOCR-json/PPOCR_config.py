@@ -73,14 +73,15 @@ def _getRamMax():
     try:
         # 获取系统总内存数（以字节为单位）
         totalMemoryBytes = psutil.virtual_memory().total
+        ramMax *= 0.5  # 取总内存的一半
         # 将总内存数转换为 MB 单位
         ramMax = totalMemoryBytes / 1048576
         ramMax = int(ramMax)
     except Exception as e:
         print("[Warning] 无法获取系统总内存数！", e)
-    # 内存下限200MB，上限8G
-    if ramMax < 200:
-        ramMax = 200
+    # 默认内存下限512MB，上限8G
+    if ramMax < 512:
+        ramMax = 512
     elif ramMax > 8192:
         ramMax = 8192
     return ramMax
