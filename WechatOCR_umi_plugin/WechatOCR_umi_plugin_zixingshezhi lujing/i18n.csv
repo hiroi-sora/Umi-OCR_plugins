@@ -1,6 +1,0 @@
-key,en_US,zh_TW,ja_JP
-微信OCR(本地)-用户自行设置路径,WeChat OCR (Local) - Users can set their own path,微信OCR（本地）-用戶自行設定路徑,ウィーチャットOCR（ローカル）-ユーザー独自のパス設定
-WeChatOCR.exe的文件路径,The file path of WeChat OCR. exe,WeChatOCR.exe的檔案路徑,WeChatOCR.exeのファイルパス
-"WeChatOCR.exe的文件路径,不是微信的路径","The file path of WeChat OCR exe,is not the path of WeChat",WeChatOCR.exe的檔案路徑，不是微信的路徑,WeChatOCR.exeのファイルパス、ウィーチャットのパスではありません
-微信的完整路径，有带版本号就填带版本号的路径,"The complete path of WeChat, if there is a path with a version number, fill in the path with the version number",微信的完整路徑，有帶版本號就填帶版本號的路徑,微信の完全なパス、バージョン番号があればバージョン番号が記入されるパス
-微信的完整路径，有带版本号就填带版本号的路径，例如：C:\Program Files (x86)\Tencent\WeChat\[3.9.8.25],"The complete path of WeChat, if there is a path with a version number, fill in the path with the version number, for example: C:\Program Files (x86)\Tencent\WiChat\[3.9.8.25]",微信的完整路徑，有帶版本號就填帶版本號的路徑，例如：C:\Program Files（x86）\Tencent\WeChat\[3.9.8.25],WeChatの完全なパスには、バージョン番号が付いていればバージョン番号が記入されるパスがあります。例：C： Program Files（x 86） Tencent WeChat [3.9.25]
