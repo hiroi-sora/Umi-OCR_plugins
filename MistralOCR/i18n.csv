@@ -1,0 +1,27 @@
+key,en_US
+Mistral OCR,Mistral OCR
+API密钥,API Key
+Mistral API的密钥，用于访问OCR服务。,API key for Mistral OCR service.
+模型,Model
+Mistral OCR使用的模型名称。,Model name used by Mistral OCR.
+超时时间,Timeout
+API请求的超时时间。,Timeout for API requests.
+秒,seconds
+包含图像Base64,Include Image Base64
+是否在响应中包含图像的Base64编码。,Whether to include Base64 encoded images in the response.
+文字识别（Mistral OCR）,Text Recognition (Mistral OCR)
+语言,Language
+自动检测,Auto Detect
+中文,Chinese
+英文,English
+日语,Japanese
+韩语,Korean
+法语,French
+德语,German
+俄语,Russian
+西班牙语,Spanish
+葡萄牙语,Portuguese
+意大利语,Italian
+识别的目标语言，自动检测可能会影响准确性。,Target language for recognition. Auto detection may affect accuracy.
+最小图像尺寸,Minimum Image Size
+提取图像的最小尺寸（像素）。0表示不限制。,Minimum size of extracted images (pixels). 0 means no limit.
