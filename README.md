@@ -117,7 +117,7 @@ Umi-OCR (v2 以上) 支持以插件的形式导入 OCR 引擎等组件，只需�
 
 > 基于 Mistral AI OCR API 进行文字识别
 
-| 源仓库     | [mistral.ai_umi_plugin](https://github.com/chunzhimoe/mistral.ai_umi_plugin/releases)           |
+| 源仓库     | [mistral.ai_umi_plugin](https://github.com/chunzhimoe/mistral.ai_umi_plugin/)           |
 | ---------- | ---------------------------------------------------------------------- |
 | 下载       | [Releases](https://github.com/chunzhimoe/mistral.ai_umi_plugin/releases) |
 | 计算方式   | 云端，API 调用                                                              |
