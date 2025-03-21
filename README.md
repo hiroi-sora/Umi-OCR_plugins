@@ -8,7 +8,7 @@
 
 这里是存放开源软件 [Umi-OCR](https://github.com/hiroi-sora/Umi-OCR) 的插件的仓库。
 
-Umi-OCR (v2 以上) 支持以插件的形式导入 OCR 引擎等组件，只需将插件文件放置于软件指定目录即可。
+Umi-OCR (v2 以上) 支持以插件的形式导入 OCR 引擎等组件，只需将插件文件放置于软件指定目录即可。good
 
 - [如何开发插件？](demo_AbaOCR)
 
