@@ -5,6 +5,7 @@
 import os
 import psutil  # 进程检查
 from platform import system  # 平台检查
+import threading  # 线程
 
 from call_func import CallFunc
 from .PPOCR_api import PPOCR_pipe
@@ -51,6 +52,7 @@ class Api:  # 公开接口
         if isinstance(m, (int, float)):
             self.ramInfo["time"] = m
         self.isInit = True
+        self.lock = threading.Lock()  # 线程锁
 
     # 更新启动参数，将data的值写入target
     def _updateExeConfigs(self, target, data):
@@ -60,63 +62,63 @@ class Api:  # 公开接口
 
     # 启动引擎。返回： "" 成功，"[Error] xxx" 失败
     def start(self, argd):
-        # 加载局部参数
-        tempConfigs = self.exeConfigs.copy()
-        self._updateExeConfigs(tempConfigs, argd)
-        # 若引擎已启动，且局部参数与传入参数一致，则无需重启
-        if not self.api == None:
-            if set(tempConfigs.items()) == set(self.exeConfigs.items()):
+        with self.lock:
+            # 加载局部参数
+            tempConfigs = self.exeConfigs.copy()
+            self._updateExeConfigs(tempConfigs, argd)
+            # 若引擎已启动，且局部参数与传入参数一致，则无需重启
+            if self.api is not None and set(tempConfigs.items()) == set(
+                self.exeConfigs.items()
+            ):
                 return ""
-            # 若引擎已启动但需要更改参数，则停止旧引擎
-            self.stop()
-        # 启动新引擎
-        self.exeConfigs = tempConfigs
-        # 启动引擎
-        try:
-            self.api = PPOCR_pipe(ExePath, argument=tempConfigs)
-        except Exception as e:
-            self.api = None
-            return f"[Error] OCR init fail. Argd: {tempConfigs}\n{e}"
-        return ""
+            # 记录参数
+            self.exeConfigs = tempConfigs
+            # 启动引擎
+            try:
+                self.stop()
+                self.api = PPOCR_pipe(ExePath, argument=tempConfigs)
+            except Exception as e:
+                self.api = None
+                return f"[Error] OCR init fail. Argd: {tempConfigs}\n{e}"
+            return ""
 
     def stop(self):  # 停止引擎
-        if self.api == None:
+        if self.api is None:
             return
         self.api.exit()
         self.api = None
 
     def runPath(self, imgPath: str):  # 路径识图
-        self.__runBefore()
+        self._runBefore()
         res = self.api.run(imgPath)
-        self.__ramClear()
+        self._ramClear()
         return res
 
     def runBytes(self, imageBytes):  # 字节流
-        self.__runBefore()
+        self._runBefore()
         res = self.api.runBytes(imageBytes)
-        self.__ramClear()
+        self._ramClear()
         return res
 
     def runBase64(self, imageBase64):  # base64字符串
-        self.__runBefore()
+        self._runBefore()
         res = self.api.runBase64(imageBase64)
-        self.__ramClear()
+        self._ramClear()
         return res
 
-    def __runBefore(self):
+    def _runBefore(self):
         CallFunc.delayStop(self.ramInfo["timerID"])  # 停止ram清理计时器
 
     def _restart(self):  # 重启引擎
-        self.stop()
-        # 启动引擎
-        try:
-            self.api = PPOCR_pipe(ExePath, argument=self.exeConfigs)
-            print("重启引擎")
-        except Exception as e:
-            self.api = None
-            print(f"[Error]重启引擎失败: {e}")
+        with self.lock:
+            try:
+                self.stop()
+                self.api = PPOCR_pipe(ExePath, argument=self.exeConfigs)
+            except Exception as e:
+                self.api = None
+                print(f"[Error] OCR restart fail: {e}")
 
-    def __ramClear(self):  # 内存清理
+    def _ramClear(self):  # 内存清理
         if self.ramInfo["max"] > 0:
             pid = self.api.ret.pid
             rss = psutil.Process(pid).memory_info().rss
