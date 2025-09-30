@@ -113,6 +113,21 @@ Umi-OCR (v2 以上) 支持以插件的形式导入 OCR 引擎等组件，只需�
 | 附带语言库 | 中英日文                                                                 |
 
 ---
+### AI_OCR_umi_plugin
+
+> 基于 AI 的 OCR 插件，提供 13个主流AI服务商 的OCR功能，支持云端和本地AI服务的视觉识别API。作为离线OCR的强力补充，为用户提供更高精度、更广泛语言支持的智能文字识别服务。
+
+| 源仓库     | [AI_OCR_umi_plugin](https://github.com/EatWorld/UmiOCR-AI-OCR-Plugin)      |
+| ---------- | --------------------------------------------------------------------------- |
+| 下载       | [Releases](https://github.com/EatWorld/UmiOCR-AI-OCR-Plugin/releases)       |
+| 计算方式   | 云端，API 调用                                         |
+| 平台兼容   | 跨平台                                                |
+| 硬件兼容   | 无特殊要求                                |
+| 附带语言库 | 多语言识别                                             |
+
+---
+
+
 ### mistral.ai_umi_plugin
 
 > 基于 Mistral AI OCR API 进行文字识别
