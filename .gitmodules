@@ -7,3 +7,6 @@
 [submodule "WechatOCR_umi_plugin"]
 	path = WechatOCR_umi_plugin
 	url = git@github.com:eaeful/WechatOCR_umi_plugin.git
+[submodule "PaddleOCR-json_PP-OCRv5_umi_plugin"]
+	path = PaddleOCR-json_PP-OCRv5_umi_plugin
+	url = git@github.com:OneDongua/PaddleOCR-json_PP-OCRv5_umi_plugin.git
