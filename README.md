@@ -125,6 +125,20 @@ Umi-OCR (v2 以上) 支持以插件的形式导入 OCR 引擎等组件，只需�
 | 硬件兼容   | 无特殊要求                                                             |
 | 附带语言库 | 多语言识别                                                                 |
 
+### umi-ocr-swiss-army-knife
+
+> Umi-OCR 本地 OCR 插件合集，包含 PP-OCRv6 通用文字识别、HyperLPR3 中国车牌识别和 ddddocr 验证码识别。三个插件采用独立运行环境，支持自动下载依赖与模型，完成部署后可离线使用。
+
+| 项目        | 说明                                                                                        |
+| --------- | ----------------------------------------------------------------------------------------- |
+| 源仓库       | [grayooon/umi-ocr-swiss-army-knife](https://github.com/grayooon/umi-ocr-swiss-army-knife) |
+| 下载        | [Releases](https://github.com/grayooon/umi-ocr-swiss-army-knife/releases)                 |
+| 计算方式      | 本地、CPU                                                                                    |
+| 平台兼容      | Windows 10 x64                                                                            |
+| Umi-OCR版本 | Umi-OCR 2.1.5                                                                             |
+| 识别能力      | 通用文字、中国车牌、字母数字验证码                                                                         |
+
+
 ## 插件开发
 
 请见 [插件开发文档及 demo](demo_AbaOCR)。
